@@ -79,7 +79,7 @@ class QRCode {
 $qrcode = new QRCode();
 
 
-$imgQRCode = '<img src="' . $qrcode->getQrCodeUrl("http://127.0.0.1/SworldApi/SworldEcommerceApi/respQR.php?_tk=18",177,177,"UTF-8","H") . '" />';
+$imgQRCode = '<img src="' . $qrcode->getQrCodeUrl("https://example.com/",177,177,"UTF-8","H") . '" />';
 $imgQRCode = htmlentities($imgQRCode);
 echo html_entity_decode($imgQRCode);
 
