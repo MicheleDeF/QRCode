@@ -1,79 +1,78 @@
 <?php
 
-class QRCode {
+class QR
+{
+    public $cht;    
+    public $apiurl;
 
-	
-	private static $cht = "qr";
+    public function __construct(){
 
-	
-	private static $apiurl = "http://chart.apis.google.com/chart";
-	
-	public function getQrCodeUrl($data,$width,$height,$encoding=false,$correctionLevel=false) {
-	
-		 $data = urlencode($data);
-	
-		$url = QRCode::$apiurl . "?cht=". QRCode::$cht
-		. "&chl=" . $data
-		. "&chs=" . $width . "x" . $height;
-	
-		if($encoding){
-			$url .= "&choe=" . $encoding;
-		}
-	
-		if($correctionLevel){
-			$url .= "&chld=" . $correctionLevel;
-		}
-	
-		return $url;
-	}
-	
+        $this->cht = "qr";
+        $this->apiurl = "https://chart.googleapis.com/chart";
+    }
+    
+    public function getQrCode($data, $width, $height, $output_encoding = false, $error_correction_level = false)
+    {
+        $data = urlencode($data);
+        
+        $url = $this->apiurl . "?cht=" . $this->cht . "&chl=" . $data . "&chs=" . $width . "x" . $height;
+        
+        if ($output_encoding)
+        {
+            $url .= "&choe=" . $output_encoding;
+        }
+        if ($error_correction_level)
+        {
+            $url .= "&chld=" . $error_correction_level;
+        }
 
-	public function getQrCodeData($data,$width,$height,$encoding=false,$correctionLevel=false){
-		
-		$data = urlencode($data);
-	
-		
-		$parameterList = array(
-				'cht' => QRCode::$cht,
-				'chs' => $width . "x" . $height,
-				'chl' => $data);
-	
-		
-		if($encoding){
-			$parameterList['choe'] = $encoding;
-		}
-	
-		if($correctionLevel){
-			$parameterList['chld'] = $correctionLevel;
-		}
-	
-		
-		$content = http_build_query($parameterList);
-	
-		
-		$context = stream_context_create(array(
-				                                'http' => array(
-				                                		'method' => 'POST', 
-				                                		'header' => "Connection: close\r\n".
-                                                                    "Content-Type: application/x-www-form-urlencoded\r\n".
-                                                                    "Content-Length: ".strlen($content)."\r\n",
-				                                		'content' => $content
-				                                           )
-				
-				                                )
-				                       );
-	
-		
-		$fp = fopen(QRCode::$apiurl, 'r', false, $context);
-	
-		
-		$response = stream_get_contents($fp);
-	
-		return $response;
-	}
-	
+        return $url;
+    }
+    public function postQrCode($data, $width, $height, $output_encoding = false, $error_correction_level = false)
+    {
+        $data = urlencode($data);
+        
+        $parameterList = array(
+            'cht' => $this->cht,
+            'chs' => $width . "x" . $height,
+            'chl' => $data
+        );
+        
+        if ($output_encoding)
+        {
+            $parameterList['choe'] = $output_encoding;
+        }
+        
+        if ($error_correction_level)
+        {
+            $parameterList['chld'] = $error_correction_level;
+        }
+        
+        $content = http_build_query($parameterList);
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $this->apiurl,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => $content,
+            CURLOPT_HTTPHEADER => array(
+                'Content-Type: application/x-www-form-urlencoded'
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+    
+        return $response;
+    }
 }
-
 
 
 $qrcode = new QRCode();
