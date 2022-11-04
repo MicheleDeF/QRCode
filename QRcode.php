@@ -73,22 +73,3 @@ class QR
         return $response;
     }
 }
-
-
-$qrcode = new QRCode();
-
-
-$imgQRCode = '<img src="' . $qrcode->getQrCodeUrl("https://example.com/",177,177,"UTF-8","H") . '" />';
-$imgQRCode = htmlentities($imgQRCode);
-echo html_entity_decode($imgQRCode);
-
-
-
-
-
-
-
-
-
-
-?>
