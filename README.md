@@ -27,6 +27,6 @@ $qrPost = $qr->postQrCode($code, 177, 177, "UTF-8", "H");
 ```
 
 ## Also read the related official documentation
-- [QR Code Googlw Api][df1]
+- [QR Code Google Api][df1]
 
 [df1]: <https://developers.google.com/chart/infographics/docs/qr_codes>
