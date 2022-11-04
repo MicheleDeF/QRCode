@@ -1,7 +1,7 @@
 # QRCode
 generare un qr code con php e chart apis google
 
-## Example
+## Example of use
 
 ```sh
 <?php
