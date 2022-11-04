@@ -25,3 +25,8 @@ $qrPost = $qr->postQrCode($code, 177, 177, "UTF-8", "H");
 <img src="<?='data:image/png;base64,' . base64_encode($qrPost)?>" />
 
 ```
+
+## Also read the related official documentation
+- [QR Code Googlw Api][df1]
+
+[df1]: <https://developers.google.com/chart/infographics/docs/qr_codes>
