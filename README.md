@@ -6,6 +6,8 @@ generare un qr code con php e chart apis google
 ```sh
 <?php
 
+require 'QRcode.php';
+
 $qr = new QR();
 
 $code = "Hello World";
