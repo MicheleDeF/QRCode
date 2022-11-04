@@ -1,5 +1,5 @@
 # QRCode
-generare un qr code con php e chart apis google
+### Generate a qr code with php and chart apis google
 
 ## Example of use
 
