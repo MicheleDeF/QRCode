@@ -18,10 +18,10 @@ $qrPost = $qr->postQrCode($code, 177, 177, "UTF-8", "H");
 
 ?>
 
-<!-- QR Code con GET -->
+<!-- QR code generated with GET request -->
 <img src="<?=$qrGet;?>" />
 
-<!-- QR Code con POST-->
+<!-- QR code generated with POST request-->
 <img src="<?='data:image/png;base64,' . base64_encode($qrPost)?>" />
 
 ```
