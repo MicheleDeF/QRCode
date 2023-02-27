@@ -1,5 +1,6 @@
 {
     "name": "micheledef/qr-code-php",
+    "license": "GPL-3.0",
     "autoload": {
         "psr-4": {
             "QrCode\\": "src/"
