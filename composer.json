@@ -4,16 +4,17 @@
     "type": "package",
     "license": "GPL-3.0",
     "autoload": {
-        "psr-4": {
-            "QrCode\\QrCodePhp\\": "src/"
+        "psr-0": {
+            "": "src/"
         }
+    },
+    "config": {
+        "optimize-autoloader": true
     },
     "authors": [
         {
             "name": "MicheleDeF",
             "email": "defalco_michele@libero.it"
         }
-    ],
-    "minimum-stability": "stable",
-    "require": {}
+    ]
 }

@@ -3,19 +3,13 @@
 
 ## Example of use
 
-### install via composer, run
-
-```sh
-composer require micheledef/qr-code-php
-```
-
 ```sh
 
 <?php
 
 require 'vendor/autoload.php';
 
-use App\QrcodePhp\QRcode;
+use QRcode\QRcode;
 
 $qr = new QRcode();
 
