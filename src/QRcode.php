@@ -1,6 +1,6 @@
 <?php
 
-namespace App\QrcodePhp;
+namespace QrCode\QrcodePhp;
 
 class QRcode
 {
