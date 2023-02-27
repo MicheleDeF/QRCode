@@ -1,6 +1,8 @@
 <?php
 
-class QR
+namespace App\QrcodePhp;
+
+class QRcode
 {
     public $cht;    
     public $apiurl;
