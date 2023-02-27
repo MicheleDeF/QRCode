@@ -1,5 +1,5 @@
 {
-    "name": "micheledef/qrcode-php",
+    "name": "micheledef/qr-code-php",
     "description": "Generate a qr code with php and chart apis google",
     "autoload": {
         "psr-4": {
