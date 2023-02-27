@@ -1,20 +1,15 @@
 {
     "name": "micheledef/qr-code-php",
-    "description": "Generate a qr code with php and chart apis google",
-    "type": "package",
-    "license": "GPL-3.0",
     "autoload": {
-        "psr-0": {
-            "": "src/"
+        "psr-4": {
+            "QrCode\\": "src/"
         }
-    },
-    "config": {
-        "optimize-autoloader": true
     },
     "authors": [
         {
             "name": "MicheleDeF",
             "email": "defalco_michele@libero.it"
         }
-    ]
+    ],
+    "require": {}
 }
