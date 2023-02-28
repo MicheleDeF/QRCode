@@ -1,5 +1,6 @@
 # QRCode
-### Generate a qr code with php and chart apis google
+### Generate a qr code with php and Google Charts Infographics
+
 
 ## Quick Start
 
