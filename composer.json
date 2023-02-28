@@ -1,6 +1,6 @@
 {
     "name": "micheledef/qr-code-php",
-    "license": "MIT",
+    "license": "GPL-3.0",
     "type": "library",
     "autoload": {
         "psr-4": {
