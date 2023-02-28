@@ -1,7 +1,7 @@
 <?php
-namespace QrCode;
+namespace QRCode;
 
-class QRcode
+class QRCode
 {
     public $cht;    
     public $apiurl;
@@ -74,3 +74,4 @@ class QRcode
         return $response;
     }
 }
+

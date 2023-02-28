@@ -1,17 +1,25 @@
 # QRCode
 ### Generate a qr code with php and chart apis google
 
+## Quick Start
+
+```sh
+git clone https://github.com/MicheleDeF/QRCode.git
+cd QRCode
+composer dump-autoload
+php -S localhost:8000
+```
+
 ## Example of use
 
 ```sh
-
 <?php
 
 require 'vendor/autoload.php';
 
-use QRcode\QRcode;
+use QRCode\QRCode;
 
-$qr = new QRcode();
+$qr = new QRCode();
 
 $code = "Hello World";
 
@@ -26,7 +34,6 @@ $qrPost = $qr->postQrCode($code, 177, 177, "UTF-8", "H");
 
 <!-- QR code generated with POST request-->
 <img src="<?='data:image/png;base64,' . base64_encode($qrPost)?>" />
-
 ```
 
 ## Also read the related official documentation
