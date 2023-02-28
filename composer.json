@@ -1,6 +1,7 @@
 {
     "name": "micheledef/qr-code-php",
-    "license": "GPL-3.0",
+    "license": "MIT",
+    "type": "library",
     "autoload": {
         "psr-4": {
             "QRCode\\": "src/"
@@ -12,5 +13,6 @@
             "email": "defalco_michele@libero.it"
         }
     ],
+    "minimum-stability": "stable",
     "require": {}
 }
