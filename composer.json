@@ -11,7 +11,9 @@
     "authors": [
         {
             "name": "MicheleDeF",
-            "email": "defalco_michele@libero.it"
+            "email": "defalco_michele@libero.it",
+            "homepage": "https://github.com/MicheleDeF",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "stable",
