@@ -12,7 +12,7 @@ php -S localhost:8000
 
 ## Install via Composer
 ```sh
-composer require micheledef/qr-code-php:dev-master
+composer require micheledef/qr-code-php
 ```
 
 ## Example of use
