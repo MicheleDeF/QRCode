@@ -13,6 +13,6 @@
             "email": "defalco_michele@libero.it"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {}
 }
