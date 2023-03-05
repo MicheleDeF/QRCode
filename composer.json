@@ -5,7 +5,7 @@
     "keywords": ["qr code"],
     "autoload": {
         "psr-4": {
-            "QRCode\\": "src/"
+            "Micheledef\\QrCodePhp\\": "src/"
         }
     },
     "authors": [

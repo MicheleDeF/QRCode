@@ -1,7 +1,7 @@
 <?php 
 require 'vendor/autoload.php';
 
-use QRCode\QRCode;
+use Micheledef\QrCodePhp\QRCode;
 
 $qr = new QRCode();
 
@@ -17,5 +17,5 @@ $qrPost = $qr->postQrCode($code, 177, 177, "UTF-8", "H");
 <img src="<?=$qrGet;?>" />
 
 <!-- QR code generated with POST request-->
-<img src="<?='data:image/png;base64,' . base64_encode($qrPost)?>" />
+<img src="<?=$qrPost?>" />
 

@@ -1,5 +1,5 @@
 <?php
-namespace QRCode;
+namespace Micheledef\QrCodePhp;
 
 class QRCode
 {
@@ -70,8 +70,12 @@ class QRCode
 
         $response = curl_exec($curl);
         curl_close($curl);
+
+        $url = "data:image/png;base64," . base64_encode($response);
     
-        return $response;
+        return $url;
     }
+
+
 }
 
