@@ -2,7 +2,7 @@
     "name": "micheledef/qr-code-php",
     "license": "MIT",
     "type": "library",
-    "keywords": ["qr code"],
+    "keywords": ["qr code, qr code php, "],
     "autoload": {
         "psr-4": {
             "Micheledef\\QrCodePhp\\": "src/"
