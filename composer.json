@@ -2,7 +2,8 @@
     "name": "micheledef/qr-code-php",
     "license": "MIT",
     "type": "library",
-    "keywords": ["qr code"],
+    "keywords": ["qr code", "qp code php", "qrcode", "qr-code-php"],
+    "description": "Generate a qr code with PHP and Google Charts Infographics",
     "autoload": {
         "psr-4": {
             "Micheledef\\QrCodePhp\\": "src/"
