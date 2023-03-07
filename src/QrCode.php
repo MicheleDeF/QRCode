@@ -1,6 +1,18 @@
 <?php
 namespace Micheledef\QrCodePhp;
 
+/**
+ * QRCode class
+ * 
+ * @author Michele De Falco <https://github.com/MicheleDeF>
+ * 
+ * @license https://github.com/MicheleDeF/QRCode/blob/master/LICENSE.md MIT License
+ * 
+ * @tutorial https://github.com/MicheleDeF/QRCode
+ * 
+ * @version v1.0.1
+ */
+
 class QRCode
 {
     public $cht;    
@@ -12,24 +24,58 @@ class QRCode
         $this->apiurl = "https://chart.googleapis.com/chart";
     }
     
-    public function getQrCode($data, $width, $height, $output_encoding = false, $error_correction_level = false)
+
+    /**
+     * getQrCode function
+     * 
+     * @param mixed $data 
+     * 
+     * @param int $width
+     * 
+     * @param int $height
+     * 
+     * @param string $output_encoding is an optional parameter, it means to encode the data in QR code, UTF-8 is the default value
+     * 
+     * @param string $error_correction_level is an optional parameter, indicates the level of error correction to allow for recovery of missing, misread, or redacted data, default is L
+     * 
+     * @return string
+     */ 
+
+    public function getQrCode($data, int $width, int $height, $output_encoding = false, $error_correction_level = false)
     {
         $data = urlencode($data);
         
         $url = $this->apiurl . "?cht=" . $this->cht . "&chl=" . $data . "&chs=" . $width . "x" . $height;
         
-        if ($output_encoding)
-        {
+        if ($output_encoding){
             $url .= "&choe=" . $output_encoding;
         }
-        if ($error_correction_level)
-        {
+
+        if ($error_correction_level){
             $url .= "&chld=" . $error_correction_level;
         }
 
         return $url;
     }
-    public function postQrCode($data, $width, $height, $output_encoding = false, $error_correction_level = false)
+
+   /**
+     * postQrCode function
+     * 
+     * @param mixed $data 
+     * 
+     * @param int $width
+     * 
+     * @param int $height
+     * 
+     * @param string $output_encoding is an optional parameter, it means to encode the data in QR code, UTF-8 is the default value
+     * 
+     * @param string $error_correction_level is an optional parameter, indicates the level of error correction to allow for recovery of missing, misread, or redacted data, default is L
+     * 
+     * @return string
+     */ 
+
+
+    public function postQrCode($data, int $width, int $height, $output_encoding = false, $error_correction_level = false)
     {
         $data = urlencode($data);
         
@@ -39,13 +85,11 @@ class QRCode
             'chl' => $data
         );
         
-        if ($output_encoding)
-        {
+        if ($output_encoding){
             $parameterList['choe'] = $output_encoding;
         }
         
-        if ($error_correction_level)
-        {
+        if ($error_correction_level){
             $parameterList['chld'] = $error_correction_level;
         }
         

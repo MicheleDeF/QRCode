@@ -8,7 +8,7 @@
 git clone https://github.com/MicheleDeF/QRCode.git
 cd QRCode
 composer dump-autoload
-php -S localhost:8000
+composer run start-example
 ```
 
 ## Install via Composer
