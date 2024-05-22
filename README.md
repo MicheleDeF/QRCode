@@ -50,3 +50,4 @@ $qrPost = $qr->postQrCode($code, 177, 177, "UTF-8", "H");
 
 [df1]: <https://developers.google.com/chart/infographics/docs/qr_codes>
 [df2]: <https://www.ilblogdiunprogrammatore.it/28273-generare-un-codice-qr-con-le-api-google-chart-e-php.html>
+[DEPRECATED]
